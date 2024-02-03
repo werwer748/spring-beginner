@@ -67,10 +67,10 @@ public class AppConfig { //? 팩토리 메서드를 통해서 빈을 등록하�
     public OrderService orderService() {
         System.out.println("call AppConfig.orderService");
         // * 생성자 주입
-//        return new OrderServiceImpl(
-//                memberRepository(),
-//                discountPolicy()
-//        );
-        return null;
+        return new OrderServiceImpl(
+                memberRepository(),
+                discountPolicy()
+        );
+//        return null;
     }
 }
